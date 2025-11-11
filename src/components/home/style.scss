@@ -46,27 +46,28 @@ html.intro-active {
   }
 }
 
+/* =============================
+   ✅ 인트로 영역 (수정 부분)
+============================= */
 .intro {
   position: absolute;
   inset: 0;
   z-index: 2;
   opacity: 1;
   pointer-events: none;
-  clip-path: inset(0% 0% 0% 0%);
-  &.is-active {
-    opacity: 1;
-  }
 }
+
 .intro__route {
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 50%;
   top: 50%;
-  transform: translateY(-50%);
-  width: 100vw;
-  height: clamp(240px, 26vh, 320px);
+  transform: translate(-50%, -50%);
+  width: 100vw; /* ✅ 양쪽 끝까지 확장 */
+  height: auto; /* ✅ 세로 비율 유지 */
   overflow: visible;
+  display: block;
 }
+
 .route {
   fill: none;
   stroke: #4fa5de;
@@ -75,6 +76,10 @@ html.intro-active {
   stroke-linejoin: round;
   vector-effect: non-scaling-stroke;
 }
+
+/* =============================
+   ✅ 이하 기존 내용 그대로 유지
+============================= */
 
 .hero {
   position: absolute;
