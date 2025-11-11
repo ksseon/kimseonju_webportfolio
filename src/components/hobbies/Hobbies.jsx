@@ -139,7 +139,7 @@ const Hobbies = () => {
         <div className="marquee__inner">
           {Array.from({ length: 6 }).map((_, i) => (
             <div className="marquee__part" key={i}>
-              Web Publishers CREATIVE PORTFOLIO BY KIMSEONJU
+              WEB PUBLISHING CREATIVE PORTFOLIO BY KIMSEONJU
             </div>
           ))}
         </div>
