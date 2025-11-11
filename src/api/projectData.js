@@ -21,10 +21,10 @@ export const projects = [
     desc: "GSAP과 React를 활용하여 감각적인 인터랙션과 함께 정체성이 돋보이도록 구성한 포트폴리오 프로젝트입니다.",
     thumbnail: "/images/Portfolio_thumb.png",
     imgSlides: ["/images/Portfolio_1.png", "/images/Portfolio_2.png"],
-    github: "https://github.com/ksseon/kimseonjuportfolio.git",
+    github: "https://github.com/ksseon/kimseonju_webportfolio.git",
     figma:
-      "https://www.figma.com/design/ooD4M67t4qlqBny2Tig3J0/kimseonju_frontend_portfolio?node-id=0-1&t=Z33qpQjMVqIJBnAv-1",
-    site: "https://kimseonjuportfolio.vercel.app/",
+      "https://www.figma.com/design/I1bjghYJmlrsrKzT2CC5GP/kimseonju_web_portfolio?node-id=0-1&t=ek2bYwHJ47gJUL1o-1",
+    site: "https://kimseonju-webportfolio.vercel.app/",
     tools: "React·Vite·SCSS·GSAP·Figma·ChatGPT",
     pages: "Home·About·Project·Contact",
     type: "Personal Project",
