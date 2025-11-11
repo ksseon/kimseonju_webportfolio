@@ -46,9 +46,6 @@ html.intro-active {
   }
 }
 
-/* =============================
-   ✅ 인트로 영역 (수정 부분)
-============================= */
 .intro {
   position: absolute;
   inset: 0;
@@ -62,8 +59,8 @@ html.intro-active {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 100vw; /* ✅ 양쪽 끝까지 확장 */
-  height: auto; /* ✅ 세로 비율 유지 */
+  width: 100vw;
+  height: auto;
   overflow: visible;
   display: block;
 }
@@ -76,10 +73,6 @@ html.intro-active {
   stroke-linejoin: round;
   vector-effect: non-scaling-stroke;
 }
-
-/* =============================
-   ✅ 이하 기존 내용 그대로 유지
-============================= */
 
 .hero {
   position: absolute;
