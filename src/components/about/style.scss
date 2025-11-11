@@ -53,6 +53,7 @@ html.intro-active .about {
     will-change: transform, filter;
     margin: vw(40px) 0 0 vw(100px);
     transform-origin: 50% 50%;
+
     img {
       display: block;
       width: vw(330px);
@@ -60,6 +61,7 @@ html.intro-active .about {
       border-radius: 10px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
     }
+
     &:hover {
       filter: drop-shadow(0 0 10px rgba(142, 208, 255, 0.4));
     }
@@ -92,7 +94,7 @@ html.intro-active .about {
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0.32px;
-    margin-bottom: vw(20px);
+    margin-bottom: vw(10px);
   }
 
   &__title {
@@ -100,19 +102,19 @@ html.intro-active .about {
     font-size: 16px;
     font-weight: 300;
     line-height: normal;
+    margin-top: 10px;
   }
 
   &__list {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-bottom: vw(20px);
-
     .row {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      column-gap: 50px;
-      align-items: start;
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+      column-gap: 40px;
+      margin-bottom: 6px;
     }
 
     .date {
@@ -122,6 +124,7 @@ html.intro-active .about {
       line-height: 1.4;
       letter-spacing: 0.32px;
       white-space: nowrap;
+      min-width: 100px;
     }
 
     .desc {
@@ -145,7 +148,9 @@ html.intro-active .about {
       text-align: center;
       font-family: "Cormorant Garamond", "Times New Roman", serif;
       font-size: 35px;
+      font-style: normal;
       font-weight: 400;
+      line-height: normal;
       letter-spacing: 0.7px;
       margin-bottom: vw(40px);
     }
@@ -186,15 +191,40 @@ html.intro-active .about {
     .about__skill-grid {
       display: flex;
       gap: 35px;
-      justify-content: center;
-      flex-wrap: wrap;
     }
 
     .skill-card {
       position: relative;
-      text-align: center;
-      width: 160px;
+      text-align: left;
+      width: 320px;
       box-sizing: border-box;
+
+      &:nth-child(1) {
+        padding-left: 0;
+      }
+
+      &:nth-child(4) {
+        padding-right: 0;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -10px;
+        width: 1px;
+        height: 100%;
+        background-color: #272727;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+
+      &:nth-child(2),
+      &:nth-child(4) {
+        padding-top: 100px;
+      }
 
       .skill-icon {
         margin-bottom: 12px;
@@ -202,19 +232,21 @@ html.intro-active .about {
 
       .skill-title {
         color: #bfe6ff;
-        font-size: 20px;
+        font-size: 25px;
+        font-style: normal;
         font-weight: 300;
         line-height: normal;
         letter-spacing: 0.4px;
+        margin-bottom: 20px;
       }
 
       .skill-desc {
         color: #b5b5b5;
-        font-size: 15px;
+        font-size: 16px;
+        font-style: normal;
         font-weight: 300;
         line-height: 150%;
         letter-spacing: 0.32px;
-        margin-top: 10px;
       }
     }
   }
@@ -257,10 +289,10 @@ html.intro-active .about {
 
     &__list {
       .row {
-        display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 12px;
+        justify-content: center;
+        margin-bottom: 16px;
       }
 
       .date {
@@ -286,21 +318,30 @@ html.intro-active .about {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
-        gap: 24px;
+        gap: 32px 24px;
       }
 
       .skill-card {
-        width: 120px;
-
+        width: 140px;
+        padding: 0;
+        text-align: center;
+        &:nth-child(2),
+        &:nth-child(4) {
+          padding-top: 0px;
+        }
         .skill-icon {
           margin-bottom: 8px;
         }
 
         .skill-title {
-          font-size: 14px;
+          font-size: 15px;
         }
 
         .skill-desc {
+          display: none;
+        }
+
+        &::after {
           display: none;
         }
       }
