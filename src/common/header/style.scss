@@ -1,0 +1,150 @@
+@use "../../styles/utils" as *;
+
+#site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+  transition: all 0.35s ease;
+
+  &.scrolled {
+    background: rgba(31, 37, 43, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  .inner {
+    width: min(1800px, 92vw);
+    margin-inline: auto;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .seonju {
+    margin: 0;
+    font-size: 0;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo {
+      width: 25px;
+      height: 25px;
+    }
+
+    .name {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .desc {
+      color: #cccccc;
+      font-size: 15px;
+      font-weight: 400;
+      margin-top: 1px;
+    }
+  }
+
+  .menu {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 8px 12px;
+
+    a {
+      position: relative;
+      display: inline-block;
+      padding: 6px 20px;
+      color: #bfbfbf;
+      text-align: center;
+      font-family: Pretendard;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.32px;
+      transition: color 0.18s ease, opacity 0.18s ease;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: opacity 0.18s ease, transform 0.18s ease;
+        color: #4fa5de;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0;
+        pointer-events: none;
+      }
+
+      &::before {
+        content: "{";
+        left: 6px;
+        transform: translate(-4px, -50%);
+      }
+
+      &::after {
+        content: "}";
+        right: 6px;
+        transform: translate(4px, -50%);
+      }
+
+      &:hover::before,
+      &:hover::after {
+        opacity: 1;
+        transform: translate(0, -50%);
+      }
+
+      &:hover {
+        color: #ffffff;
+        opacity: 0.95;
+      }
+
+      &.active {
+        color: #4fa5de;
+        font-weight: 500;
+      }
+    }
+  }
+
+  @media (max-width: 680px) {
+    .inner {
+      width: 96vw;
+      padding: 12px 10px;
+    }
+
+    .menu {
+      gap: 18px;
+      padding: 8px;
+    }
+  }
+}
+
+body,
+#root {
+  transform: none !important;
+  filter: none !important;
+  overflow: visible !important;
+  isolation: auto !important;
+}
