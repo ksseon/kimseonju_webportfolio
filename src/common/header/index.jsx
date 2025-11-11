@@ -10,7 +10,7 @@ const Header = () => {
           <Link to="/">
             <img src="/images/logo.png" alt="logo" className="logo" />
             <span className="name">KIMSEONJU</span>
-            <span className="desc">2025 FRONTEND PORTFOLIO</span>
+            <span className="desc">2025 WEB PORTFOLIO</span>
           </Link>
         </h1>
         <NavBar />
